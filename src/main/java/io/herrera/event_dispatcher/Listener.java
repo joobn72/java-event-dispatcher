@@ -8,7 +8,7 @@ package io.herrera.event_dispatcher;
 public interface Listener
 {
     /**
-     * Invokes the listeners using the dispatched event.
+     * Invokes the listener using the dispatched event.
      *
      * @param event The dispatched event.
      *
