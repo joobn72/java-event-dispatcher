@@ -25,14 +25,18 @@
   <licenses>
     <license>
       <name>The MIT License (MIT)</name>
-      <url>https://github.com/kherge/java-event-dispatcher/blob/master/LICENSE</url>
+      <url>https://github.com/kherge/java-event-dispatcher/blob/master/LICENSE
+      </url>
       <distribution>repo</distribution>
     </license>
   </licenses>
   <scm>
     <url>https://github.com/kherge/java-event-dispatcher</url>
-    <connection>scm:git:https://github.com/kherge/java-event-dispatcher.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/kherge/java-event-dispatcher.git</developerConnection>
+    <connection>scm:git:https://github.com/kherge/java-event-dispatcher.git
+    </connection>
+    <developerConnection>
+      scm:git:ssh://git@github.com/kherge/java-event-dispatcher.git
+    </developerConnection>
   </scm>
   <developers>
     <developer>
@@ -117,22 +121,6 @@
         </executions>
       </plugin>
 
-      <!-- gpg signing -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
     </plugins>
   </build>
 
@@ -140,5 +128,39 @@
   <properties>
     <github.global.server>github</github.global.server>
   </properties>
+
+  <!-- profiles -->
+  <profiles>
+
+    <!-- gpg signing -->
+    <profile>
+      <id>release-sign-artifacts</id>
+      <activation>
+        <property>
+          <name>performRelease</name>
+          <value>true</value>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.5</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+  </profiles>
 
 </project>
