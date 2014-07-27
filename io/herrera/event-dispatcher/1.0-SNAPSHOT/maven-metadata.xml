@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>io.herrera</groupId>
+  <artifactId>event-dispatcher</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20140727.205838</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20140727205838</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.0-20140727.205838-1</value>
+        <updated>20140727205838</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0-20140727.205838-1</value>
+        <updated>20140727205838</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
